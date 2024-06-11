@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zara - HOME</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="navbar">
+    <a class="logo">
+      <svg width="180" height="56" viewBox="0 0 180 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M43.1539 40.2603C43.1539 42.685 41.1235 44.6538 39.5946 44.6538H22.3115L44.0503 10.0009H14.9831V15.7406H16.4771C16.4771 13.3141 18.0506 11.348 19.5804 11.348H34.515L12.6487 46H44.1796L44.1814 40.2594H43.1539V40.2603ZM68.4897 44.877C70.5987 44.877 72.6484 44.0051 72.1871 43.1977L68.1463 35.1954H53.9255L50.2193 43.2178C49.8288 44.1202 51.4556 44.8761 52.981 44.8761V46H44.7781L44.7772 44.8761C46.8854 44.8761 48.368 43.9528 48.6389 43.2256L64.0514 10L80.8705 43.1968C81.4078 44.0687 82.9848 44.8761 85.5691 44.8761L85.5657 46H68.4897V44.877ZM54.5432 33.8997L60.6956 20.4245L67.5644 33.8997H54.5432ZM87.5297 11.3916C90.0328 11.3916 92.0955 12.035 92.0955 12.8128C92.0955 18.9876 92.0815 43.1663 92.0955 43.1663C92.0955 43.992 90.0564 44.9119 87.555 44.9119L87.5515 46H104.27V44.9868C101.785 44.9868 99.7742 43.9955 99.7742 43.1716V11.0838H104.593C109.238 11.0838 112.997 14.9324 112.997 19.3006C112.997 23.6697 109.234 27.2105 104.59 27.2105H101.254C101.254 27.2105 112.556 44.285 112.571 44.285C113.018 44.9302 113.238 46 113.238 46H125.422V44.9868C123.077 44.9868 121.85 44.0147 121.171 43.1681L110.29 29.0031C115.512 28.6587 119.557 24.4431 119.557 19.4436C119.557 14.2191 115.059 10.0009 109.506 10.0009H87.5297V11.3916ZM150.268 44.9127C152.381 44.9127 154.429 44.0051 153.967 43.1977L149.925 35.1954H135.706L132 43.2178C131.611 44.1202 133.237 44.9868 134.762 44.9868V46H126.558V44.9119C128.667 44.9119 130.149 43.9528 130.419 43.2256L145.834 10L162.654 43.1968C163.189 44.0687 164.766 44.9494 167.351 44.9494L167.348 46H150.268V44.9127ZM136.324 33.8997L142.475 20.4245L149.347 33.8997H136.324Z"
+          fill="#3C3A36" />
+      </svg>
+    </a>
+
+    <nav>
+      <a href="#">home</a>
+      <div class="dropdown">
+        <button class="dropdown-toggle" type="button">
+          collections
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.175 7.15L10 10.975L13.825 7.15L15 8.33333L10 13.3333L5 8.33333L6.175 7.15Z" fill="#3C3A36" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+      <a href="#">about</a>
+      <a href="#">contact</a>
+      <a href="#">shop</a>
+      <a href="#" class="active">cart</a>
+    </nav>
+    </ul>
+  </div>
+
+  <div class="content">
+    <div class="form-container">
+      <h3>Carrinho</h3>
+
+      <form id="cartForm">
+        <input type="text" id="name" placeholder="Nome">
+        <input type="email" id="email" placeholder="Email">
+        <button id="saveButton" type="submit">Salvar</button>
+        <p id="frase">  </p>
+      </form>
+    </div>
+
+    <div id="userInfo" class="hide"></div>
+
+    <div class="products">
+      <div class="product">
+        <span>Item 1</span>
+        <span class="price">R$ 10,00</span>
+        <button class="add-to-cart" value="item1" onclick="adicionarAoCarrinho('Item 1', 10)" disabled>Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <span>Item 2</span>
+        <span class="price">R$ 20,00</span>
+        <button class="add-to-cart" value="item2" onclick="adicionarAoCarrinho('Item 2', 20)" disabled>Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <span>Item 3</span>
+        <span class="price">R$ 30,00</span>
+        <button class="add-to-cart" onclick="adicionarAoCarrinho('Item 3', 30)" disabled>Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <span>Item 4</span>
+        <span class="price">R$ 27,37</span>
+        <button class="add-to-cart" onclick="adicionarAoCarrinho('Item 4', 27.37)" disabled>Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <span>Item 5</span>
+        <span class="price">R$ 399,80</span>
+        <button class="add-to-cart" onclick="adicionarAoCarrinho('Item 5', 399.80)" disabled>Adicionar ao Carrinho</button>
+      </div>
+    </div>
+
+    <div id="cart">
+      <h2>Carrinho</h2>
+      <ul id="cartItems"></ul>
+      <p>Total: R$ <span id="totalPrice">0,00</span></p>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
